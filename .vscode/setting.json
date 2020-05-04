@@ -1,0 +1,3 @@
+{
+  "pandoc.pdfOptString": "-F pandoc-crossref --filter pandoc-citeproc --pdf-engine=lualatex -N --template=/dist/to/your/template.tex"
+}
