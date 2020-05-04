@@ -6,7 +6,7 @@
 
 ## 使い方
 
-先人に感謝:pray:
+[先人](https://gist.github.com/Kumassy/cbecb2a34f68cfd0a6be24426f9c7aa4)に感謝:pray:
 
 ディレクトリとかは自分の環境によって適宜読み替えてください．
 
