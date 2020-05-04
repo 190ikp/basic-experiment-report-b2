@@ -10,10 +10,10 @@
 
 ディレクトリとかは自分の環境によって適宜読み替えてください．
 
-1. texlive, pandoc, pandoc-citeproc, pandoc-crossrefをインストール \
-   (Pandocのインストールは[`Stack`](https://docs.haskellstack.org/en/stable/README/)を使うと楽，texliveはググってどうぞ)
+1. `texlive`, `pandoc`, `pandoc-citeproc`, `pandoc-crossref`をインストール \
+   (Pandocのインストールは[`Stack`](https://docs.haskellstack.org/en/stable/README/)を使うと楽，`texlive`はググってどうぞ)
 2. template.mdをもとにいい感じのレポートをMarkdownで書く
-3. `pandoc your_report.md -o your_report.pdf -F pandoc-crossref -F pandoc-crossref --filter pandoc-citeproc --pdf-engine=lualatex -N --template=/dist/to/your/template.tex`でビルド \
+3. `pandoc your_report.md -o your_report.pdf -F pandoc-crossref --filter pandoc-citeproc --pdf-engine=lualatex -N --template=/dist/to/your/template.tex`でビルド \
    `template.tex`のパスはフルパスを書いておいたほうが安全です．
 4. PDFでレポートが出力されるので確認する
 5. 実験レポートが生まれたよ！かわいいね
