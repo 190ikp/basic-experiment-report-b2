@@ -307,9 +307,9 @@ $endif$
 
 \begin{templaturetabular}
 \begin{tabular}{|m{13mm}|m{58mm}|}\hline
-\centering 室温 & $metadata.table5.temperature$ \celsius \\ \hline
-\centering 湿度 & $metadata.table5.humidity$ \% \\ \hline
-\centering 気圧 & $metadata.table5.pressure$ hPa \\ \hline
+\centering 室温 & $metadata.table5.temperature$ $if(metadata.table5.temperature)$\celsius $else$ $endif$ \\ \hline
+\centering 湿度 & $metadata.table5.humidity$ $if(metadata.table5.humidity)$\% $else$ $endif$ \\ \hline
+\centering 気圧 & $metadata.table5.pressure$ $if(metadata.table5.pressure)$hPa $else$ $endif$ \\ \hline
 \end{tabular}
 \end{templaturetabular}
 
