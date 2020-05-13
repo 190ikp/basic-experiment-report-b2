@@ -1,1 +1,3 @@
 .vscode/settings.json
+template/*.log
+template/*.pdf
