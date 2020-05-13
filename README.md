@@ -27,8 +27,13 @@
 
 ## オススメ
 
-VSCodeを入れて`vscode-pandoc`を使うと，settings.jsonに`"pandoc.pdfOptString": "-F pandoc-crossref --filter pandoc-citeproc --pdf-engine=lualatex -N --template=/dist/to/your/template.tex"`と書いておけば`Shift+Ctrl+P -> Pandoc Render -> pdf`でビルドできていい感じに楽できます．\
+VSCodeを入れて[`vscode-pandoc`](https://marketplace.visualstudio.com/items?itemName=DougFinke.vscode-pandoc)を使うと，settings.jsonに`"pandoc.pdfOptString": "-F pandoc-crossref --filter pandoc-citeproc --pdf-engine=lualatex -N --template=/dist/to/your/template.tex"`と書いておけば`Shift+Ctrl+P -> Pandoc Render -> pdf`でビルドできていい感じに楽できます．\
+[`.vscode/settings.json.example`](.vscode/settings.json.example)に例があります．\
 Windowsに対応させるのが面倒なので作ってませんが，makefileを使うのもありだと思います．
+
+また，デフォルトだと図表のラベルが英語で振られます．これを日本語にするには，pandoc-crossrefのconfigを書いてあげる必要があります．\
+ホームディレクトリ直下に`.pandoc-crossref`ディレクトリを作って[`template/pandoc-crossref.yaml`](template/pandoc-crossref.yaml)を置いてあげると，特にオプションで指定しなくても反映されるようになります．
+もしくは，Pandocでのビルド時に`--metadata`オプションで`crossrefYaml`キーを使って，このconfigファイルを指定してください．
 
 ## その他
 
