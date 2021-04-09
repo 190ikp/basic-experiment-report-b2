@@ -182,7 +182,7 @@ $endfor$
 % Inclusion for custom template
 \usepackage{tabularx}
 \usepackage{ragged2e}
-\usepackage[top=35truemm,bottom=30truemm,left=30truemm,right=30truemm]{geometry}
+\usepackage[top=35truemm,bottom=30truemm,left=18truemm,right=18truemm]{geometry}
 \usepackage{multirow}
 \usepackage{gensymb}
 \usepackage{textcomp}
@@ -229,7 +229,7 @@ $if(lof)$
 \listoffigures
 $endif$
 
-
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
 
 % Custom template starts from here
 \newenvironment{boldtabular}{ \arrayrulewidth = 2pt }{}
@@ -239,26 +239,35 @@ $endif$
 \newenvironment{templaturetabular}{ \renewcommand{\arraystretch}{1.18} }{}
 \newenvironment{kotitle}{
 \centering
-  \fontsize{20pt}{20pt}\selectfont
+  \fontsize{22pt}{22pt}\selectfont
 }{}
-\fontsize{11pt}{22pt}\selectfont
+\newenvironment{koyear}{
+\raggedleft
+  \fontsize{16pt}{16pt}\selectfont
+}{}
+\fontsize{14pt}{24pt}\selectfont
 
 \vspace*{-13pt}
 \begin{kotitle}
-  理工学基礎実験レポート
+  電気情報工学実験第１　レポート
 
 \end{kotitle}
 
-\vspace{19.5mm}
+\vspace{3mm}
+
+\begin{koyear}
+  2021 年度　　
+
+\end{koyear}
 
 \begin{titletabular}
-\begin{tabularx}{\textwidth}{|m{23mm}|X|}\hline
-実験日 & $metadata.table1.date$ \\ \hline
-\parbox[c][14mm][c]{0pt}{}実験題目  & $metadata.table1.theme$ \\ \hline
+\begin{tabularx}{\textwidth}{|wc{37mm}|X|}\hline
+\parbox[c][12.5mm][c]{0pt}{}実験テーマ & $metadata.table1.theme$ \\ \hline
+\parbox[c][12.5mm][c]{0pt}{}担当教員名  & $metadata.table1.teacher$ \\ \hline
 \end{tabularx}
 \end{titletabular}
 
-\vspace{10mm}
+\vspace{3mm}
 
 % \begin{boldtabular}
 % \begin{tabularx}{\textwidth}{|l|l|X|l|X|l|X|}\hline
@@ -267,51 +276,33 @@ $endif$
 % \end{tabularx}
 % \end{boldtabular}
 
-\begin{boldtabular}
+\begin{titletabular}
   \begin{table}[!h]
+    \fontsize{14pt}{24pt}\selectfont
     \hspace{-8pt}
     \begin{tabular}{l}
-      \begin{tabularx}{\textwidth}{|l|m{50mm}|l|m{12mm}|l|X|}\hline
-        \parbox[c][10mm][c]{0pt}{} 学科  & $metadata.table2.faculty$ & クラス & $metadata.table2.class$ & 学籍番号 & $metadata.table2.your_number$ \\
+      \begin{tabularx}{\textwidth}{|wc{37mm}|X|wc{37mm}|X|}\hline
+        \parbox[c][12.5mm][c]{0pt}{} 班番号  & $metadata.table2.group_number$ & 出席番号 & $metadata.table2.your_number$ \\
       \end{tabularx}\\
 
-      \begin{tabularx}{\textwidth}{|l|X|}\hline
-        \parbox[c][16mm][c]{0pt}{}\textbf{報告者氏名}  & \parbox[c][16mm][c]{\textwidth}{{\fontsize{20pt}{30pt}\selectfont\textbf{$metadata.table2.your_name$}}} \\ \hline
+      \begin{tabularx}{\textwidth}{|wc{37mm}|X|}\hline
+        \parbox[c][12.5mm][c]{0pt}{}実験者氏名  & $metadata.table2.your_name$ \\ \hline
+      \end{tabularx}\\
+      
+      \begin{tabularx}{\textwidth}{|wc{37mm}|X|}\hline
+        \parbox[c][12.5mm][c]{0pt}{}共同実験者氏名  & $metadata.table2.collaborators$ \\ \hline
       \end{tabularx}
     \end{tabular}
   \end{table}
-\end{boldtabular}
+\end{titletabular}
 
-\vspace{10mm}
+\vspace{3mm}
 
-\begin{narrowtabular}
-\begin{tabularx}{\textwidth}{|m{22mm}|X|X|}\hline
-  \multirow{4}{ 22mm }{共同実験者} & $metadata.table3.collaborator1$ & $metadata.table3.collaborator2$ \\ \cline{2-3}
- & $metadata.table3.collaborator3$ & $metadata.table3.collaborator4$ \\ \cline{2-3}
-& $metadata.table3.collaborator5$ & $metadata.table3.collaborator6$ \\ \cline{2-3}
-& $metadata.table3.collaborator7$ & $metadata.table3.collaborator8$ \\ \hline
-\end{tabularx}
-\end{narrowtabular}
-
-\vspace{10mm}
-
-\begin{datetabular}
-\begin{tabularx}{\textwidth}{|l|X|}\hline
-レポート提出日 & $metadata.table4.reporting_date$ \\ \hline
-再レポート提出日 & $metadata.table4.re_reporting_date$ \\ \hline
- &  \\ \hline
-\end{tabularx}
-\end{datetabular}
-
-\vspace{16mm}
-
-\begin{templaturetabular}
-\begin{tabular}{|m{13mm}|m{58mm}|}\hline
-\centering 室温 & $metadata.table5.temperature$ $if(metadata.table5.temperature)$\celsius $else$ $endif$ \\ \hline
-\centering 湿度 & $metadata.table5.humidity$ $if(metadata.table5.humidity)$\% $else$ $endif$ \\ \hline
-\centering 気圧 & $metadata.table5.pressure$ $if(metadata.table5.pressure)$hPa $else$ $endif$ \\ \hline
-\end{tabular}
-\end{templaturetabular}
+\begin{titletabular}
+  \begin{tabularx}{\textwidth}{|wc{37mm}|Y|wc{37mm}|Y|}\hline
+    \parbox[c][12.5mm][c]{0pt}{} 実験日  & $metadata.table3.reporting_date$ & レポート提出日 & $metadata.table3.experiment_date$ \\ \hline
+  \end{tabularx}
+\end{titletabular}
 
 \thispagestyle{empty}
 \newpage

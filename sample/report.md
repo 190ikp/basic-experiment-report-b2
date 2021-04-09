@@ -1,7 +1,5 @@
 ---
 documentclass: ltjsarticle
-header-includes:
-  - \usepackage[version=3]{mhchem}
 metadata:
   table1:
     date: 1615 年  5 月  5 日 （金）丑三つ時
@@ -38,15 +36,6 @@ metadata:
 
 # 実験原理
 ## カフェイン
-カフェインの分子式はこんな感じである： \ce{C8H10N4O2}
-
-`pandoc` では \LaTeX の記法を文章中で使えるようである．化学式を書くために，この文章の最初で
-
-```{.yaml}
-header-includes:
-  - \usepackage[version=3]{mhchem}
-```
-と書いている．化学式を書かないならこの部分は不要．
 
 ### カフェイン雑学 {#miscellaneous}
 カフェインはフランス語では caféine とかく．
@@ -74,13 +63,13 @@ header-includes:
 
 [^1]: これは `pandoc-crossref` の機能
 
-これをグラフに書くと，[@fig:my_image] のようになる．
+`これをグラフに書くと，[@fig:my_image] のようになる．`
 
-![たべものとねむみの関係](graph.png){#fig:my_image}
+`![たべものとねむみの関係](graph.png){#fig:my_image}`
 
 # 考察
 [@tbl:my_table] はなるほどという感じだ．  
-[@fig:my_image] は一理ある．
+`[@fig:my_image] は一理ある．`
 
 [カフェイン雑学](#miscellaneous)は役に立たない.
 
