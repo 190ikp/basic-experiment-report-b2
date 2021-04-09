@@ -1,22 +1,20 @@
-# 理工学部基礎実験 (B2) レポート用テンプレート
-
+# 電気情報工学実験 (B3) レポート用テンプレート
 ## これはなに
 
-慶應の理工学部2年生がMarkdown + Pandocで実験レポートを楽に生産するためのテンプレート
+慶應の理工学部電気情報工学科3年生がMarkdown + Pandocで実験レポートを楽に生産するためのテンプレート
 
 ## 使い方
 
-[先人](https://gist.github.com/Kumassy/cbecb2a34f68cfd0a6be24426f9c7aa4)に感謝:pray:
+[先人1](https://gist.github.com/Kumassy/cbecb2a34f68cfd0a6be24426f9c7aa4)
+[先人2](https://github.com/190ikp/basic-experiment-report-b2)
+に感謝:pray:
 
-ディレクトリとかは自分の環境によって適宜読み替えてください．
-
-1. `texlive`, `pandoc`, `pandoc-citeproc`, `pandoc-crossref`をインストール \
-   (Pandocのインストールは[`Stack`](https://docs.haskellstack.org/en/stable/README/)を使うと楽，`texlive`はググってどうぞ)
-2. template.mdをもとにいい感じのレポートをMarkdownで書く
-3. `pandoc your_report.md -o your_report.pdf -F pandoc-crossref --filter pandoc-citeproc --pdf-engine=lualatex -N --template=/dist/to/your/template.tex`でビルド \
-   `template.tex`のパスはフルパスを書いておいたほうが安全です．
-4. PDFでレポートが出力されるので確認する
-5. 実験レポートが生まれたよ！かわいいね
+1. VSCodeとDockerをインストール
+2. VSCodeに[Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)を入れる
+3. コマンドパレットから`Remote-Containers: Reopen in Container`を選択してコンテナに入る(初回はビルドするので遅い)
+4. template.mdをもとにいい感じのレポートをMarkdownで書く
+5. `Shift+Ctrl+P -> Pandoc Render -> pdf`でPDFを生成！(`Ctrl+K -> P`でも可)
+6. 実験レポートが生まれる
 
 ## 参考文献の書き方について
 
@@ -24,11 +22,6 @@
 ここに書くと長くなるので読んで，どうぞ． 
 
 参考文献を直接本文に書き込む場合は，`# 参考文献`の後ろに` {-}`を入れましょう (番号振られるのを避けるため)．
-
-## オススメ
-
-VSCodeを入れて`vscode-pandoc`を使うと，settings.jsonに`"pandoc.pdfOptString": "-F pandoc-crossref --filter pandoc-citeproc --pdf-engine=lualatex -N --template=/dist/to/your/template.tex"`と書いておけば`Shift+Ctrl+P -> Pandoc Render -> pdf`でビルドできていい感じに楽できます．\
-Windowsに対応させるのが面倒なので作ってませんが，makefileを使うのもありだと思います．
 
 ## その他
 
