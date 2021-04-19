@@ -1,3 +1,3 @@
 {
-  "pandoc.pdfOptString": "-F pandoc-crossref --citeproc --pdf-engine=lualatex -N --template=/workspace/template/template.tex"
+  "pandoc.pdfOptString": "-F pandoc-crossref --citeproc --pdf-engine=lualatex -N --template=/workspaces/eee-report-b3/template/template.tex"
 }
