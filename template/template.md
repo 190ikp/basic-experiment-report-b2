@@ -3,6 +3,7 @@ documentclass: ltjsarticle
 header-includes:
   - \hypersetup{ colorlinks = false }
   - \usepackage{here}
+  - \usepackage{bm}
 metadata:
   table1:
     theme: <実験テーマ>
