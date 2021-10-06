@@ -1,4 +1,5 @@
 .vscode/settings.json
-template/*.pdf
+template/template.pdf
+sample/report.pdf
 *.log
 *.ods
