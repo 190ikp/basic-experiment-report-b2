@@ -29,13 +29,21 @@
 
 ## オススメ
 
-VSCodeを入れて[`vscode-pandoc`](https://marketplace.visualstudio.com/items?itemName=DougFinke.vscode-pandoc)を使うと，settings.jsonに`"pandoc.pdfOptString": "-F pandoc-crossref --filter pandoc-citeproc --pdf-engine=lualatex -N --template=/dist/to/your/template.tex"`と書いておけば`Shift+Ctrl+P -> Pandoc Render -> pdf`でビルドできていい感じに楽できます．\
-[`.vscode/settings.json.example`](.vscode/settings.json.example)に例があります．\
-Windowsに対応させるのが面倒なので作ってませんが，makefileを使うのもありだと思います．
+~~VSCodeを入れて[`vscode-pandoc`](https://marketplace.visualstudio.com/items?itemName=DougFinke.vscode-pandoc)を使うと，settings.jsonに`"pandoc.pdfOptString": "-F pandoc-crossref --filter pandoc-citeproc --pdf-engine=lualatex -N --template=/dist/to/your/template.tex"`と書いておけば`Shift+Ctrl+P -> Pandoc Render -> pdf`でビルドできていい感じに楽できます．~~\
+~~[`.vscode/settings.json.example`](.vscode/settings.json.example)に例があります．~~\
+~~Windowsに対応させるのが面倒なので作ってませんが，makefileを使うのもありだと思います．~~
+
+[Tasks](https://code.visualstudio.com/docs/editor/tasks)を利用することでサードパーティへの依存を減らしました．\
+settings.jsonを修正する必要がなくPDFのビルドが可能です．\
+`Ctrl+Shift+P`で`Tasks: Run Build Task > build a pdf`を選択するか，`Ctrl+Shift+B`で`build a pdf`を選択するとビルドできます．\
+また，上記の操作をショートカットキーに設定することも可能です．
+詳しくは[こちら](https://code.visualstudio.com/docs/editor/tasks#_binding-keyboard-shortcuts-to-tasks)をご覧ください．\
+（ファイル保存時の自動ビルドは行いません）
 
 また，デフォルトだと図表のラベルが英語で振られます．これを日本語にするには，pandoc-crossrefのconfigを書いてあげる必要があります．\
 ホームディレクトリ直下に`.pandoc-crossref`ディレクトリを作って[`template/pandoc-crossref.yaml`](template/pandoc-crossref.yaml)を置いてあげると，特にオプションで指定しなくても反映されるようになります．
-もしくは，Pandocでのビルド時に`--metadata`オプションで`crossrefYaml`キーを使って，このconfigファイルを指定してください．
+もしくは，Pandocでのビルド時に`--metadata`オプションで`crossrefYaml`キーを使って，このconfigファイルを指定してください．\
+なお，VSCodeのTasksを利用してビルドする場合は，デフォルトで図表ラベルが日本語になるようにしてあります．
 
 ## その他
 
