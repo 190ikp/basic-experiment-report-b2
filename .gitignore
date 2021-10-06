@@ -1,3 +1,4 @@
 .vscode/settings.json
-template/*.log
 template/*.pdf
+*.log
+*.ods
