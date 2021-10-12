@@ -8,15 +8,18 @@
       "type": "shell",
       "command": "pandoc",
       "args": [
-        "${file}",
+        "${fileBasename}",
         "--filter=pandoc-crossref",
         "--metadata=crossrefYaml:${workspaceFolder}/template/pandoc-crossref.yaml",
         "--filter=pandoc-citeproc",
         "--pdf-engine=lualatex",
         "--number-sections",
         "--template=${workspaceFolder}/template/template.tex",
-        "--output=${fileDirname}/${fileBasenameNoExtension}.pdf"
+        "--output=${fileBasenameNoExtension}.pdf"
       ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
       "group": "build",
       "presentation": {
         "reveal": "silent",
