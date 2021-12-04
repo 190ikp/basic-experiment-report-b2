@@ -1,0 +1,3 @@
+{
+  "pandoc.pdfOptString": "--filter=pandoc-crossref --metadata=crossrefYaml:/dist/to/your/pandoc-crossref.yaml --filter=pandoc-citeproc --pdf-engine=lualatex --number-sections --template=/dist/to/your/template.tex"
+}
