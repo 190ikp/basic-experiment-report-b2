@@ -76,7 +76,9 @@ header-includes:
 
 これをグラフに書くと，[@fig:my_image] のようになる．
 
-![たべものとねむみの関係](graph.png){#fig:my_image}
+![たべものとねむみの関係](graph.png){#fig:my_image height=60mm}
+
+<!-- 大抵の場合 height=60mm くらいにしておくと画像がいい感じのサイズになります -->
 
 # 考察
 [@tbl:my_table] はなるほどという感じだ．  
