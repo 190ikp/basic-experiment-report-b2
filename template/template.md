@@ -3,6 +3,7 @@ documentclass: ltjsarticle
 header-includes:
   - \hypersetup{ colorlinks = false }
   - \usepackage{here}
+  - \setlength\parindent{1\zw}
   # - \usepackage[version=3]{mhchem}
 metadata:
   table1:

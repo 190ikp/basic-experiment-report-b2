@@ -1,7 +1,9 @@
 ---
 documentclass: ltjsarticle
 header-includes:
+  - \hypersetup{ colorlinks = false }
   - \usepackage[version=3]{mhchem}
+  - \setlength\parindent{1\zw}
 metadata:
   table1:
     date: 1615 年  5 月  5 日 （金）丑三つ時
