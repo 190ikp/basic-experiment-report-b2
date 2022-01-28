@@ -3,10 +3,12 @@ documentclass: ltjsarticle
 header-includes:
   - \hypersetup{ colorlinks = false }
   - \usepackage{here}
+  - \setlength\parindent{1\zw}
   # - \usepackage[version=3]{mhchem}
 metadata:
   table1:
-    date: xxxx 年  x 月  x 日 （曜日）  午前/午後
+    date: xxxx 年  x 月  x 日 （曜日）（午前/午後）
+    class_type: 対面/オンライン
     theme: <実験テーマ>
   table2:
     faculty: <学科>

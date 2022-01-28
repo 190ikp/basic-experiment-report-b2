@@ -249,16 +249,17 @@ $endif$
 
 \end{kotitle}
 
-\vspace{19.5mm}
+\vspace{19mm}
 
 \begin{titletabular}
 \begin{tabularx}{\textwidth}{|m{23mm}|X|}\hline
-実験日 & $metadata.table1.date$ \\ \hline
+\parbox[c][9mm][c]{0pt}{}実験日 & $metadata.table1.date$ \\ \hline
+\parbox[c][9mm][c]{0pt}{}実験方式  & $metadata.table1.class_type$ \\ \hline
 \parbox[c][14mm][c]{0pt}{}実験題目  & $metadata.table1.theme$ \\ \hline
 \end{tabularx}
 \end{titletabular}
 
-\vspace{10mm}
+\vspace{8mm}
 
 % \begin{boldtabular}
 % \begin{tabularx}{\textwidth}{|l|l|X|l|X|l|X|}\hline
@@ -269,20 +270,20 @@ $endif$
 
 \begin{boldtabular}
   \begin{table}[!h]
-    \hspace{-8pt}
+    \hspace{1pt}
     \begin{tabular}{l}
       \begin{tabularx}{\textwidth}{|l|m{50mm}|l|m{12mm}|l|X|}\hline
-        \parbox[c][10mm][c]{0pt}{} 学科  & $metadata.table2.faculty$ & クラス & $metadata.table2.class$ & 学籍番号 & $metadata.table2.your_number$ \\
+        \parbox[c][10.5mm][c]{0pt}{} 学科  & $metadata.table2.faculty$ & クラス & $metadata.table2.class$ & 学籍番号 & $metadata.table2.your_number$ \\
       \end{tabularx}\\
 
-      \begin{tabularx}{\textwidth}{|l|X|}\hline
-        \parbox[c][16mm][c]{0pt}{}\textbf{報告者氏名}  & \parbox[c][16mm][c]{\textwidth}{{\fontsize{20pt}{30pt}\selectfont\textbf{$metadata.table2.your_name$}}} \\ \hline
+      \begin{tabularx}{\textwidth}{|m{23mm}|X|}\hline
+        \centering\fontsize{12pt}{18pt}\selectfont\textbf{報告者氏名}  & \parbox[c][16.5mm][c]{\textwidth}{{\fontsize{20pt}{30pt}\selectfont\textbf{$metadata.table2.your_name$}}} \\ \hline
       \end{tabularx}
     \end{tabular}
   \end{table}
 \end{boldtabular}
 
-\vspace{10mm}
+\vspace{8mm}
 
 \begin{narrowtabular}
 \begin{tabularx}{\textwidth}{|m{22mm}|X|X|}\hline
@@ -297,19 +298,19 @@ $endif$
 
 \begin{datetabular}
 \begin{tabularx}{\textwidth}{|l|X|}\hline
-レポート提出日 & $metadata.table4.reporting_date$ \\ \hline
-再レポート提出日 & $metadata.table4.re_reporting_date$ \\ \hline
- &  \\ \hline
+\parbox[c][8mm][c]{0pt}{}レポート提出日 & $metadata.table4.reporting_date$ \\ \hline
+\parbox[c][8mm][c]{0pt}{}再レポート提出日 & $metadata.table4.re_reporting_date$ \\ \hline
+\parbox[c][8mm][c]{0pt}{} &  \\ \hline
 \end{tabularx}
 \end{datetabular}
 
-\vspace{16mm}
+\vspace{12.5mm}
 
 \begin{templaturetabular}
 \begin{tabular}{|m{13mm}|m{58mm}|}\hline
-\centering 室温 & $metadata.table5.temperature$ $if(metadata.table5.temperature)$\celsius $else$ $endif$ \\ \hline
-\centering 湿度 & $metadata.table5.humidity$ $if(metadata.table5.humidity)$\% $else$ $endif$ \\ \hline
-\centering 気圧 & $metadata.table5.pressure$ $if(metadata.table5.pressure)$hPa $else$ $endif$ \\ \hline
+\parbox[c][10mm][c]{0pt}{}\centering 室温 & $metadata.table5.temperature$ $if(metadata.table5.temperature)$\celsius $else$ $endif$ \\ \hline
+\parbox[c][10mm][c]{0pt}{}\centering 湿度 & $metadata.table5.humidity$ $if(metadata.table5.humidity)$\% $else$ $endif$ \\ \hline
+\parbox[c][10mm][c]{0pt}{}\centering 気圧 & $metadata.table5.pressure$ $if(metadata.table5.pressure)$hPa $else$ $endif$ \\ \hline
 \end{tabular}
 \end{templaturetabular}
 
