@@ -13,6 +13,8 @@
         "--metadata=crossrefYaml:${workspaceFolder}/template/pandoc-crossref.yaml",
         "--filter=pandoc-citeproc",
         "--pdf-engine=lualatex",
+        "--listings",
+        "-M listings",
         "--number-sections",
         "--template=${workspaceFolder}/template/template.tex",
         "--output=${fileBasenameNoExtension}.pdf"

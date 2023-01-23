@@ -5,6 +5,7 @@ header-includes:
   - \usepackage{here}
   - \setlength\parindent{1\zw}
   # - \usepackage[version=3]{mhchem}
+listings: true
 metadata:
   table1:
     date: xxxx 年  x 月  x 日 （曜日）（午前/午後）

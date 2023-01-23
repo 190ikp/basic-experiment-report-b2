@@ -102,6 +102,31 @@ $endfor$
 $endif$
 $if(listings)$
 \usepackage{listings}
+\usepackage{color}
+\definecolor{OliveGreen}{cmyk}{0.64,0,0.95,0.40}
+\definecolor{colFunc}{rgb}{1,0.07,0.54}
+\definecolor{CadetBlue}{cmyk}{0.62,0.57,0.23,0}
+\definecolor{Brown}{cmyk}{0,0.81,1,0.60}
+\definecolor{colID}{rgb}{0.63,0.44,0}
+\newcommand{\passthrough}[1]{#1}
+\lstset{defaultdialect=[5.3]Lua}
+\lstset{defaultdialect=[x86masm]Assembler}
+\lstset{
+  basicstyle={\ttfamily\small},
+  keywordstyle={\color{OliveGreen}},
+  keywordstyle={[2]\color{colFunc}},
+  keywordstyle={[3]\color{CadetBlue}},
+  commentstyle={\color{Brown}},
+  identifierstyle={\color{colID}},
+  stringstyle=\color{blue},
+  tabsize=2,
+  frame=trBL,
+  numbers=left,
+  numberstyle={\ttfamily\small},
+  breaklines=true,
+  backgroundcolor={\color[gray]{.95}},
+  captionpos=t
+}
 $endif$
 $if(lhs)$
 \lstnewenvironment{code}{\lstset{language=Haskell,basicstyle=\small\ttfamily}}{}
